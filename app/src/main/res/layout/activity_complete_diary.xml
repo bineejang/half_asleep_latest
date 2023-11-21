@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#eeeeee"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!--타이틀바-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="49dp"
+            android:background="#7880A9"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="112dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:src="@drawable/img_post_diary" />
+
+        </LinearLayout>
+
+
+        <!--내용 영역-->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!--헤더 영역-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    >
+                    <!-- 현재 화면 타이틀 -->
+                    <TextView
+                        android:id="@+id/tv_today_date_complete"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginVertical="10dp"
+                        android:text="2023.07.07"
+                        android:textSize="20dp"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"/>
+
+                    <!-- 가중치를 줌으로써 왼쪽과 오른쪽에 완벽 밀착 -->
+                    <Space
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"/>
+
+
+
+                </LinearLayout>
+
+                <!-- 사진 넣는 영역 -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="15dp"
+                    android:orientation="vertical"
+                    android:gravity="right">
+
+                    <ImageView
+                        android:id="@+id/iv_foodpic"
+                        android:layout_width="390dp"
+                        android:layout_height="390dp"
+                        android:scaleType="centerCrop"
+                        android:layout_gravity="center_horizontal"
+                        android:src="@drawable/test_img"/>
+
+                </LinearLayout>
+
+                <!--내용-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="-5dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="내용"
+                        android:textSize="16dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/mainblue"
+                        android:fontFamily="@font/chosungu_ttf"/>
+
+                    <EditText
+                        android:id="@+id/et_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/chosungu_ttf"
+                        android:gravity="top|left"
+                        android:inputType="textMultiLine"
+                        android:background="#ffffff"
+                        android:textSize="14sp"
+                        android:textColor="@color/black"
+                        android:layout_marginTop="5dp"
+                        android:singleLine="true"
+                        android:lines="16"
+                        android:maxLines="120"
+                        android:scrollbars="vertical"
+                        android:scrollHorizontally="false"
+                        android:overScrollMode="always"
+                        android:padding="8dp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="16dp"
+                    android:layout_marginBottom="40dp"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/btn_before_i2i"
+                        android:layout_width="480px"
+                        android:layout_height="wrap_content"
+                        android:text="취소"
+                        app:backgroundTint="#7F7F7F" />
+
+                    <Button
+                        android:id="@+id/btn_finish_i2i"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="작성완료"
+                        app:backgroundTint="#5760AE" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+
+    </LinearLayout>
+
+</FrameLayout>

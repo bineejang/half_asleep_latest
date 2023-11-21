@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#eeeeee"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <!--타이틀바-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#7880A9"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="20dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="15dp"
+                android:src="@drawable/img_before" />
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="100dp"
+                android:src="@drawable/img_write_diary" />
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="30dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                >
+                <!-- 당신의~ -->
+                <ImageView
+                    android:layout_width="300dp"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="-5dp"
+                    android:src="@drawable/img_draw_dream"/>
+
+                <!-- 가중치를 줌으로써 왼쪽과 오른쪽에 완벽 밀착 -->
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"/>
+
+                <!-- 재생성 버튼 -->
+                <ImageView
+                    android:id="@+id/iv_redraw_t2i"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="5dp"
+                    android:src="@drawable/ic_reset"
+                    app:tint="@color/mainblue"/>
+
+            </LinearLayout>
+
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="350dp"
+                android:layout_height="350dp"
+                android:layout_centerInParent="true"
+                android:visibility="gone"
+                android:layout_marginBottom="500dp"/>
+
+
+            <ImageView
+                android:id="@+id/iv_t2i"
+                android:layout_width="match_parent"
+                android:layout_height="370dp"
+                android:src="@drawable/test_img" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                >
+
+                <!-- 뭔가 부족~ -->
+                <ImageView
+                    android:layout_width="180dp"
+                    android:layout_height="50dp"
+                    android:src="@drawable/img_what_add"/>
+
+                <!-- 가중치를 줌으로써 왼쪽과 오른쪽에 완벽 밀착 -->
+                <Space
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"/>
+
+                <!-- 업로드 버튼 -->
+                <ImageView
+                    android:id="@+id/iv_upload"
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_marginRight="5dp"
+                    android:src="@drawable/ic_upload"
+                    app:tint="@color/mainblue"/>
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/et_t2i_add_prompt"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                android:layout_marginTop="1dp"
+                android:singleLine="true"
+                android:maxLines="1"
+                android:padding="8dp"
+                android:background="@drawable/round_layout"
+                android:hint="예) 우주에 별이 많이 그려졌으면 좋겠어"
+                android:fontFamily="@font/chosungu_ttf"/>
+
+            <Button
+                android:id="@+id/btn_finish_t2i"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="7dp"
+                android:text="완벽해!"
+                app:backgroundTint="#4E4E4E" />
+
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>
